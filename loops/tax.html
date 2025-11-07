@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethiopian Salary Calculator  2025 </title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; background: #f9fafc; }
+  h1 { text-align: center; color: #0b5fff; }
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: right; }
+  th { background: #0b5fff; color: white; }
+  td:first-child, th:first-child { text-align: center; }
+  tr:nth-child(even) { background: #f2f6ff; }
+  input { width: 120px; text-align: right; padding: 4px; }
+  button { padding: 6px 12px; margin-right: 5px; background: #0b5fff; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+  button:hover { background: #094bcc; }
+</style>
+</head>
+<body>
+<h1>Ethiopian Salary Calculator 2025
+    / የኢትዮጵያ የተቀጣሪ ደመወዝ ማሰቢያ ካልኩሌተር 2018 ዓም
+</h1>
+
+<table id="salaryTable">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Gross Salary</th>
+      <th>Tax Rate</th>
+      <th>Deduction</th>
+      <th>Pension (7%)</th>
+      <th>Tax</th>
+      <th>Total Deduction</th>
+      <th>Net Salary</th>
+      <th>your salary</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<button onclick="addRow()">➕ Add Row</button>
+
+<script>
+const pensionRate = 0.07;
+
+// Ethiopian tax brackets with associated deduction
+const taxBrackets = [
+  { min: 0, max: 2000, rate: 0.0, deduction: 0 },
+  { min: 2001, max: 4000, rate: 0.15, deduction: 300 },
+  { min: 4001, max: 7000, rate: 0.20, deduction: 500 },
+  { min: 7001, max: 10000, rate: 0.25, deduction: 850 },
+  { min: 10001, max: 14000, rate: 0.30, deduction: 1350 },
+  { min: 14001, max: Infinity, rate: 0.35, deduction: 2050 }
+];
+
+function getBracketInfo(gross) {
+  for (let bracket of taxBrackets) {
+    if (gross >= bracket.min && gross <= bracket.max) {
+      return { rate: bracket.rate, deduction: bracket.deduction };
+    }
+  }
+  return { rate: 0, deduction: 0 };
+}
+
+function calculateTax(gross) {
+  let tax = 0;
+  for (let bracket of taxBrackets) {
+    if (gross > bracket.min) {
+      const taxable = Math.min(gross, bracket.max) - bracket.min;
+      tax += taxable * bracket.rate;
+    } else {
+      break;
+    }
+  }
+  return +tax.toFixed(2);
+}
+
+function addRow(defaultGross = '', isSample = false) {
+  const tbody = document.querySelector("#salaryTable tbody");
+  const rowCount = tbody.rows.length + 1;
+  if (rowCount > 22) { alert("Maximum 22 rows allowed."); return; }
+
+  const row = tbody.insertRow();
+  row.innerHTML = `
+    <td>${rowCount}</td>
+    <td><input type="number" placeholder="Enter Gross" value="${defaultGross}" /></td>
+    <td class="taxRate">-</td>
+    <td class="bracketDeduction">-</td>
+    <td class="pension">-</td>
+    <td class="tax">-</td>
+    <td class="total">-</td>
+    <td class="net">-</td>
+    <td>
+      <button onclick="calculateRow(this)">Calculate</button>
+      <button onclick="resetRow(this)">Reset</button>
+      ${isSample ? '<span style="color:green;">Sample</span>' : ''}
+    </td>
+  `;
+}
+
+function calculateRow(button) {
+  const row = button.closest('tr');
+  const grossInput = row.cells[1].querySelector('input');
+  const gross = parseFloat(grossInput.value);
+
+  if (!isNaN(gross) && gross > 0) {
+    const pension = +(gross * pensionRate).toFixed(2);
+    const tax = +calculateTax(gross).toFixed(2);
+    const totalDeduction = +(pension + tax).toFixed(2);
+    const net = +(gross - totalDeduction).toFixed(2);
+
+    const bracketInfo = getBracketInfo(gross);
+
+    row.querySelector(".taxRate").textContent = (bracketInfo.rate * 100) + "%";
+    row.querySelector(".bracketDeduction").textContent = bracketInfo.deduction.toLocaleString();
+    row.querySelector(".pension").textContent = pension.toLocaleString();
+    row.querySelector(".tax").textContent = tax.toLocaleString();
+    row.querySelector(".total").textContent = totalDeduction.toLocaleString();
+    row.querySelector(".net").textContent = net.toLocaleString();
+  } else {
+    alert('Please enter a valid gross salary.');
+  }
+}
+
+function resetRow(button) {
+  const row = button.closest('tr');
+  row.cells[1].querySelector('input').value = '';
+  row.querySelector(".taxRate").textContent = '-';
+  row.querySelector(".bracketDeduction").textContent = '-';
+  row.querySelector(".pension").textContent = '-';
+  row.querySelector(".tax").textContent = '-';
+  row.querySelector(".total").textContent = '-';
+  row.querySelector(".net").textContent = '-';
+}
+
+// Add a sample row to guide first-time users
+addRow(6000, true);
+</script>
+</body>
+</html>
