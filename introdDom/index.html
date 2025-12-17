@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <!--1- getElementById  -->
+    <h2 id="heading">Hello beshilo tube</h2>
+
+    <!--2- getElementsByName() -->
+    <h3>Choose your favorite fruit</h3>
+     <input type="radio" name="fruit" value="banana"> Banana
+     <br>
+         <input type="radio" name="fruit" value="apple"> Apple
+         <br>
+             <input type="radio" name="fruit" value="orange"> Orange
+
+             <br>
+             <button onclick="showSelected()">Show Selected</button>
+             <p id="output"></p>
+    <!--3- getElementsByTagName() — Select by Tag Name -->
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <!-- 4️⃣ getElementsByClassName() -->
+    <div class="card">Card A</div>
+    <div class="card">Card B</div>
+    <div class="card">Card C</div>
+    <div class="not-card">Card D</div>
+    <!-- 5️⃣ querySelector() & querySelectorAll() -->
+    <button class="btn">Click Me!</button>
+    <ul>
+      <li class="active">Home</li>
+      <li class="active">About</li>
+      <li>Contact</li>
+    </ul>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
