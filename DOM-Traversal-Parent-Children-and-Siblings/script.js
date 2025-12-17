@@ -11,7 +11,7 @@ child.parentElement.style.fontSize = "50px";
 
 // children
 const container = document.getElementById("container")
-//   show all childrent
+//   show all children
  console.log(container.children);
   console.log(container.childElementCount);
   console.log(container.firstElementChild.tagName);

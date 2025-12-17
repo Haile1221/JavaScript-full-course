@@ -1,45 +1,45 @@
 // scope
 // var - function scope
 
-// function testVar() {
+function testVar() {
     
 
-//     if (true){
-//         var x  = 10
-//         console.log(x)
-//         let y = 20 ;
-//         console.log(`I am inside the block. my value is ${y}` )
+    if (true){
+        var x  = 10
+        console.log(x)
+        let y = 20 ;
+        console.log(`I am inside the block. my value is ${y}` )
 
-//     }
+    }
 
-//      console.log(x)
-//        let y = 30 ;
+     console.log(x)
+       let y = 30 ;
      
-//     console.log(`I am inside the block. my value is ${y}` )
+    console.log(`I am inside the block. my value is ${y}` )
     
-// }
-// testVar()
+}
+testVar()
 
-// console.log(x)
+console.log(x)
 
 // Hoisting possible in var but not in let
-// console.log(a);
-// var a = 5;
+console.log(a);
+var a = 5;
 
 
-// console.log(b);
-// let b = 30;
+console.log(b);
+let b = 30;
 
 // Re-declare
-// var aa = 1;
-// var aa = 2;
-// console.log(aa)
+var aa = 1;
+var aa = 2;/*in var redeclare  not allowed  */
+console.log(aa)
 
 
 // let 
-// let bb = 5;
-// let bb = 4;
-// console.log(bb)
+let bb = 5;
+let bb = 4; /*in let redeclare  not allowed  */
+console.log(bb)
 
 // re-assign both possible but not in const
 var p = 1

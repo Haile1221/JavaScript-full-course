@@ -1,47 +1,47 @@
-// console.log("object");
+console.log("object");
 // if statment
-// let grade = 80;
-// if(grade >=85){
-//     console.log("Excellent");
-// }
+let grade = 80;
+if(grade >=85){
+    console.log("Excellent");
+}
 
-// // // if ...else statment
+// // if ...else statment
 // let grade = 90;
-// if(grade >=85){
-//     console.log("A");
-// }
-// else if(grade >=75) {
-//     console.log("B");
-// }
+if(grade >=85){
+    console.log("A");
+}
+else if(grade >=75) {
+    console.log("B");
+}
 
-// else if(grade >=50) {
-//     console.log("C");
-// }
+else if(grade >=50) {
+    console.log("C");
+}
 
-// else {
-//     console.log("D");
-// }
+else {
+    console.log("D");
+}
 
-// // switch … case Statement
+// switch … case Statement
 // let grade = "D";
-// switch(grade){
-//     case "A": 
-//     console.log("Excellent");
-//     break;
-//     case "B": 
-//     console.log("Good");
-//     break;
+switch(grade){
+    case "A": 
+    console.log("Excellent");
+    break;
+    case "B": 
+    console.log("Good");
+    break;
 
-//     case "C": 
-//     console.log("Fair");
-//     break;
-//     default:
-//     console.log("needs improvement");
+    case "C": 
+    console.log("Fair");
+    break;
+    default:
+    console.log("needs improvement");
 
-// } 
+} 
 
 
-let grade = 90;
+// let grade = 90;
 switch(true){
 case(grade >=85):
     console.log("A");

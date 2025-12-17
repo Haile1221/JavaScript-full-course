@@ -1,23 +1,23 @@
 // //1- event target - the button itself
-// const btn = document.getElementById("btn");
-// const message = document.getElementById("message");
+const btn = document.getElementById("btn");
+const message = document.getElementById("message");
 
 // //2- Event listener - listens for click
-// btn.addEventListener("click", showMessage);
+btn.addEventListener("click", showMessage);
 
 // // 3 - Event handler ->(the function that runs when event happens )
 
-// function showMessage(event) {
-//   // event ->event object
-//   message.textContent = "you clicked the button";
-//   console.log("event type:", event.type);
-//   console.log("event target", event.target);
-// }
+function showMessage(event) {
+  // event ->event object
+  message.textContent = "you clicked the button";
+  console.log("event type:", event.type);
+  console.log("event target", event.target);
+}
 
-// function sayHello() {
-//     console.log("hello from handler");
+function sayHello() {
+    console.log("hello from handler");
     
-// }
+}
 
 // event - click
 //handler - sayHello()
@@ -28,7 +28,7 @@ function handleClick() {
 }
 
 // method 2 -DOM Property handler
-const btn = document.getElementById("btn")
+// const btn = document.getElementById("btn")
 btn.onclick = function() {
     console.log("clicked(DOm property)");
 } 

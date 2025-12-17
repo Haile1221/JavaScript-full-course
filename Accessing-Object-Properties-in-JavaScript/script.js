@@ -1,9 +1,9 @@
 // Dot property key-value
-// let person = {
-//     name: "Haile",
-//     age : 29,
-//     job : "part-time Youtuber"
-// }
+let person = {
+    name: "Haile",
+    age : 29,
+    job : "part-time Youtuber"
+}
 
 // How to access object properties
 
@@ -16,9 +16,9 @@ console.log(person);
 // Bracket notation []
 //   when property  names has special letters and spaces
 
-let person = {
-  " home country": "Ethiopia",
-};
+// let person = {
+//   " home country": "Ethiopia",
+// };
 
 console.log(person[" home country"]);
 

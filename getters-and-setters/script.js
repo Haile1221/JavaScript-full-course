@@ -1,35 +1,35 @@
-// // console.log("connected ");
-// // getters and setters
-// class Student {
-//     constructor(name) {
-//         this._name = name; //_name is the real data stored inside the box
+// console.log("connected ");
+// getters and setters
+class Student {
+    constructor(name) {
+        this._name = name; //_name is the real data stored inside the box
         
-//     }
-//     // Getters -> Let you read the name safely
-//     get name(){
-//         return this._name;
-//     }
-//     // Setter -> Let you change the name safely
-//     set name(newName ){
-//         if (typeof newName === "string") {
-//             // check that its text
-//             this._name = newName;
-//         } else {
-//             console.log("Name must be text");
-//         }
-//     }
-// }
+    }
+    // Getters -> Let you read the name safely
+    get name(){
+        return this._name;
+    }
+    // Setter -> Let you change the name safely
+    set name(newName ){
+        if (typeof newName === "string") {
+            // check that its text
+            this._name = newName;
+        } else {
+            console.log("Name must be text");
+        }
+    }
+}
 
-// // let's use the code 
+// let's use the code 
 
-// let student1 = new
-// Student("Alex")
-// console.log(student1.name); //uses getter - Alex
+let student1 = new
+Student("Alex")
+console.log(student1.name); //uses getter - Alex
 
-// student1.name = "Selam " //uses setter - change safely
-// console.log(student1.name);
-// student1.name = 1235;
-// console.log(student1.name);
+student1.name = "Selam " //uses setter - change safely
+console.log(student1.name);
+student1.name = 1235;
+console.log(student1.name);
 
 
 // Inheritance

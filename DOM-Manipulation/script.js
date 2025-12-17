@@ -1,9 +1,9 @@
 // 1. getElementById
-// const title = document.getElementById("heading");
-// //   manipulate element
-// title.style.background ="blue"
-//  title.style.color ="white"
-//    title.style.fontSize ="30px"
+const title = document.getElementById("heading");
+//   manipulate element
+title.style.background = "blue";
+title.style.color = "white";
+title.style.fontSize = "30px";
 
 // 2. getElementsByName()
 
@@ -15,8 +15,9 @@ function showSelected() {
     if (f.checked) selected = f.value;
   }
 
-  document.getElementById("output").textContent =
-    selected ? `You chose: ${selected}` : "No fruit selected";
+  document.getElementById("output").textContent = selected
+    ? `You chose: ${selected}`
+    : "No fruit selected";
 }
 
 // 3 getElementsByTagName() — Select by Tag Name
@@ -41,18 +42,18 @@ console.log(cards);
 // 5️⃣ querySelector() & querySelectorAll()
 
 // Select the first element with class="btn"
-    const button = document.querySelector(".btn");    
-    // Add event listener
+const button = document.querySelector(".btn");
+// Add event listener
 button.addEventListener("click", () => {
   button.style.backgroundColor = "purple";
-button.textContent = "Clicked!";    }); 
- console.log(button);
-   // Select all <li> elements with class="active"
-    const activeItems = document.querySelectorAll("li.active"); 
-        activeItems.forEach((item) => {
-      item.style.color = "blue";
-      item.textContent += " ✔";
-    });
+  button.textContent = "Clicked!";
+});
+console.log(button);
+// Select all <li> elements with class="active"
+const activeItems = document.querySelectorAll("li.active");
+activeItems.forEach((item) => {
+  item.style.color = "blue";
+  item.textContent += " ✔";
+});
 
-    console.log(activeItems);
-
+console.log(activeItems);

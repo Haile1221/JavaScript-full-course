@@ -1,11 +1,11 @@
 // console.log("Welcome to Beshilo Tubbe")
 // javascript is weakly typed
 
-// let x = 10 ;
+let x = 10 ;
  
-//  x = "beshilo tube"
+ x = "beshilo tube"
 
-// console.log(x)
+console.log(x)
 
 // Boolean true and false 
 let boolVal = true;
@@ -29,7 +29,7 @@ console.log(typeof Number(bigval));
 
 // string
 
-let x = "Subscribe beshilo tube"
+// let x = "Subscribe beshilo tube"
 console.log(typeof x);
 
 // undefined ->variable declared but not initialized

@@ -54,16 +54,16 @@ let day1 = [12,12,11,11,10,9,9,10,12,13,15,18,21,24,24,23,25,25,23,21,20,19,17,1
 console.log(getMeanTemp(day1));
 
 
-// const getMeanTemp =(temperatures)=>temperatures.reduce((sum,temp) =>sum + temp, 0)/temperatures.length;
+const getMeanTemp =(temperatures)=>temperatures.reduce((sum,temp) =>sum + temp, 0)/temperatures.length;
 
 // let day1 = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16];
 
-// let day2 = [14, 15, 15, 16, 17, 18, 19, 19, 20, 21, 22, 23, 23, 22, 21, 20, 19, 18, 17, 16, 15, 15, 14, 14];
+let day2 = [14, 15, 15, 16, 17, 18, 19, 19, 20, 21, 22, 23, 23, 22, 21, 20, 19, 18, 17, 16, 15, 15, 14, 14];
 
-// let day3 = [10, 9, 9, 8, 7, 7, 8, 9, 10, 12, 14, 15, 16, 17, 17, 16, 15, 14, 12, 11, 10, 9, 9, 8];
+let day3 = [10, 9, 9, 8, 7, 7, 8, 9, 10, 12, 14, 15, 16, 17, 17, 16, 15, 14, 12, 11, 10, 9, 9, 8];
 
 
 
-// console.log("Average day -1 :", getMeanTemp(day1));
-// console.log("Average day -2 :", getMeanTemp(day2));
-// console.log("Average day -3 :", getMeanTemp(day3));
+console.log("Average day -1 :", getMeanTemp(day1));
+console.log("Average day -2 :", getMeanTemp(day2));
+console.log("Average day -3 :", getMeanTemp(day3));

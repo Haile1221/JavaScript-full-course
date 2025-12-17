@@ -1,9 +1,8 @@
-// console.log("Connected");
 // Arrays
-// let a = [10, 20, "hi", true]; //array []
-//   console.log(a);
-//   console.log(a[3]);
-// console.log(typeof a);
+let a = [10, 20, "hi", true]; //array []
+  console.log(a);
+  console.log(a[3]);
+console.log(typeof a);
 // Objects {}
 
 let contact = {channel: "beshilotube"} //empty oject
