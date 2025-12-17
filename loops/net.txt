@@ -1,9 +1,0 @@
-example 
-gross salary 2759
-tax range over 14000 falls 35% tax 
-deduction 2050
-
-income tax = (2759 * 35% ) - 2050 = 7606.15
-
-pension = 27589 * 7%  = 1931.23
-Employee net income  = 27589 - 7606.15 - 1931.23 = 18051.62

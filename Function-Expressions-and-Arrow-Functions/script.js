@@ -1,49 +1,48 @@
-// // console.log("connected");
-// function showMessage(msg) {
+function showMessage(msg) {
     
-//     console.log(msg);
-// }
+    console.log(msg);
+}
 
-// let sm  = showMessage
+let sm  = showMessage
 
-// sm("its works")
-// console.log(typeof sm);
+sm("its works")
+console.log(typeof sm);
 
 // Function Expression
 
 // named function
-// function addNumbers(a,b) {
-//     return a +b;
-// }
+function addNumbers(a,b) {
+    return a +b;
+}
 
-// console.log(addNumbers(10, 20));
+console.log(addNumbers(10, 20));
 
 // // to change into expression
 // let myAdd = function (a,b) {
 //     return a +b;
 // }
-// // Anonymous function
+// Anonymous function
 
-// console.log(myAdd(10,20));
+console.log(myAdd(10,20));
 
 // Arrow Functions
 
-// let myAdd =  (a,b) => a +b;
-// console.log(myAdd(10,20));
+let myAdd =  (a,b) => a +b;
+console.log(myAdd(10,20));
 
 
 // Passing functions as parameter
-// function operation(func, x, y) {
-//     return func(x, y);
-// }
+function operation(func, x, y) {
+    return func(x, y);
+}
 
-// console.log(operation((a, b) => a + b, 10, 20));
-// console.log(operation((a, b) => a * b, 10, 20));
-// console.log(operation((a, b) => a - b, 50, 20));
+console.log(operation((a, b) => a + b, 10, 20));
+console.log(operation((a, b) => a * b, 10, 20));
+console.log(operation((a, b) => a - b, 50, 20));
 // Example arrow function with one parameter
 
-// let double = x =>x+2
-// console.log(double(5));
+let double = x =>x+2
+console.log(double(5));
 
 // Example arrow function with two parameter
 

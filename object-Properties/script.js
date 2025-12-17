@@ -1,9 +1,9 @@
-// // javaScript object properties
-// //  key/prop vs value
-// let car = {
-// brand: "Toyota",
-// model : "2025"
-// }
+// javaScript object properties
+//  key/prop vs value
+let car = {
+brand: "Toyota",
+model : "2025"
+}
 
 // Dot Notation
 

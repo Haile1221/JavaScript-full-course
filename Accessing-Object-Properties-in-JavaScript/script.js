@@ -1,41 +1,41 @@
-// // // Dot property key-value
-// // let person = {
-// //     name: "Haile",
-// //     age : 29,
-// //     job : "part-time Youtuber"
-// // }
-
-// // // How to access object properties
-
-// // console.log(person.name);
-// // console.log(person.age);
-// // console.log(person.job);
-
-// // console.log(person);
-
-// // Bracket notation []
-// //   when property  names has special letters and spaces
-
+// Dot property key-value
 // let person = {
-//   " home country": "Ethiopia",
-// };
+//     name: "Haile",
+//     age : 29,
+//     job : "part-time Youtuber"
+// }
 
-// console.log(person[" home country"]);
+// How to access object properties
+
+console.log(person.name);
+console.log(person.age);
+console.log(person.job);
+
+console.log(person);
+
+// Bracket notation []
+//   when property  names has special letters and spaces
+
+let person = {
+  " home country": "Ethiopia",
+};
+
+console.log(person[" home country"]);
 
 // Without Constructor Function
 
-// let car1 ={
-//     brand:"Toyota",
-//     color:"red"
-// }
+let car1 ={
+    brand:"Toyota",
+    color:"red"
+}
 
-// let car2 ={
-//     brand:"Honda",
-//     color:"red"
-// }
+let car2 ={
+    brand:"Honda",
+    color:"red"
+}
 
-// console.log(car1);
-// console.log(car2);
+console.log(car1);
+console.log(car2);
 
 // With Constructor Function
 
